@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carshop</title>
+  <meta charset="utf-8">
+  <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+</head>
+<body>
+  <h1 class="header">Carshop</h1>
+  <h2 class="header">Welcome to the carshop web application</h2>
+  <p>Throgh this website you can communicate with your database, get specific chunks of data and add new data to your server</p>
+  <p id="start">Let's get started!</p>
+  <p>Start off by choosing any of the options below. To then come back to this page when you are done, simply press "Back" in your browser</p><br><br>
+  <div id="gets">
+    <form class="get">
+      <p>By pressing the button "Get Employees" you will be directed to a page containing all employees and each employee's
+      corresponding data.</p><br>
+      <button formaction="/employees" type="submit" formmethod="get" class="button">
+        Get Employees</button>
+    </form>
+    <form class="get">
+      <p>By pressing the button "Get Car Models" you will be directed to a page containing all car models and each car model's
+       corresponding data.</p><br>
+      <button formaction="/cars" type="submit" formmethod="get" class="button">
+      Get Car Models</button>
+    </form>
+    <form class="get">
+      <p>By pressing the button "Get Sales Figures" you will be directed to a similar page as for "Get Employees" but with
+          each employee's sales figures as well. </p><br>
+      <button formaction="/sales" type="submit" formmethod="get" class="button">
+          Get Sales Figures</button>
+    </form>
+  </div>
+  <br>
+  <br>
+  <form action="/newcar" method="post" id="new-car-form" class="get">
+      <p id="textnewcar">Enter New Car Model</p>
+      <p class="formtext">ID:</p>
+      <input type="text" name="id" id="id"><br>
+      <p class="formtext">Brand:</p>
+      <input type="text" name="brand" id="brand"><br>
+      <p class="formtext">Model:</p>
+      <input type="text" name="model" id="model"><br>
+      <p class="formtext">Price (SEK):</p>
+      <input type="text" name="price" id="price"><br><br>
+      <input type="submit" class="button">
+    </form>
+    <p id="disclaimer">Disclaimer: The data from the form is not sent in JSON as specified and the 
+        data.json-file doesn't seem to update when form is sent. </p>
+
+      </thead>
+
+  </body>
+</html>
